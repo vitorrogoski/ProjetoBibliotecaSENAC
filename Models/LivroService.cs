@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Collections;
@@ -28,11 +29,12 @@ namespace Biblioteca.Models
             }
         }
 
-        public ICollection<Livro> ListarTodos(FiltrosLivros filtro = null)
+        public ICollection<Livro> ListarTodos(int pag = 1, int tamanho = 4, FiltrosLivros filtro = null)
         {
             using(BibliotecaContext bc = new BibliotecaContext())
             {
                 IQueryable<Livro> query;
+                int pular = (pag - 1) * tamanho;
                 
                 if(filtro != null)
                 {
@@ -40,11 +42,11 @@ namespace Biblioteca.Models
                     switch(filtro.TipoFiltro)
                     {
                         case "Autor":
-                            query = bc.Livros.Where(l => l.Autor.Contains(filtro.Filtro));
+                            query = bc.Livros.Where(l => l.Autor.Contains(filtro.Filtro, StringComparison.CurrentCultureIgnoreCase));
                         break;
 
                         case "Titulo":
-                            query = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro));
+                            query = bc.Livros.Where(l => l.Titulo.Contains(filtro.Filtro, StringComparison.CurrentCultureIgnoreCase));
                         break;
 
                         default:
@@ -59,7 +61,7 @@ namespace Biblioteca.Models
                 }
                 
                 //ordenação padrão
-                return query.OrderBy(l => l.Titulo).ToList();
+                return query.Skip(pular).Take(tamanho).OrderBy(l => l.Titulo).ToList();
             }
         }
 
@@ -81,6 +83,11 @@ namespace Biblioteca.Models
             using(BibliotecaContext bc = new BibliotecaContext())
             {
                 return bc.Livros.Find(id);
+            }
+        }
+        public int NumeroDeLivros(){
+            using(var context = new BibliotecaContext()){
+                return context.Livros.Count();
             }
         }
     }

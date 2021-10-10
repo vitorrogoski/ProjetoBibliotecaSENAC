@@ -54,3 +54,7 @@
         </table>
     </div>
 </div>
+
+@for(int i = 1; i <= (int)ViewData["NumeroDePaginas"]; i++){
+    <a class="badge badge-dark text-monospace" href="/Livro/Listagem?pag=@i">@i</a>
+}

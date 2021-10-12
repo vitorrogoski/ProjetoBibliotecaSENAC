@@ -45,5 +45,13 @@ namespace Biblioteca.Controllers
         {
             return View();
         }
+        public IActionResult Registro()
+        {
+            return View();
+        }
+        public IActionResult RegistroRealizado()
+        {
+            return View();
+        }
     }
 }

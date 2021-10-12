@@ -51,3 +51,9 @@ C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp
 C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.genruntimeconfig.cache
+C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastro.cshtml.g.cs
+C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\EditarUsuario.cshtml.g.cs
+C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Listagem.cshtml.g.cs
+C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\PrecisaAdmin.cshtml.g.cs
+C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\CadastroRealizado.cshtml.g.cs
+C:\Users\vitor\Downloads\Biblioteca - netcore3.1\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ExcluirUsuario.cshtml.g.cs
